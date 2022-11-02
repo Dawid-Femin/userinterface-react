@@ -1,0 +1,10 @@
+.carImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img.imageSize {
+    width: 300px;
+    padding: 20px; 
+}

@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Home from './pages/Home';
+import PurchaseRules from './pages/PurchaseRules.jsx';
+import Footer from './components/Footer';
+import FindVehicle from './pages/FindVehicle';
+import Costs from './pages/Costs';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <nav>
+        <Navigation />
+      </nav>
+      <header>
+        <Header />
       </header>
+      <section>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/purchaseRules' element={<PurchaseRules />}/>
+          <Route path='/findVehicle' element={<FindVehicle />}/>
+          <Route path='/costs' element={<Costs />}/>
+          <Route path='/contact' element={<Contact />}/>
+        </Routes>
+      </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

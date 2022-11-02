@@ -1,0 +1,9 @@
+.containerLimit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLimit p {
+    max-width: 1000px;
+}
